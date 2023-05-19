@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+          http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+              http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+        ">
+    
+    <!--Setting values using setter injection-->
+<!--    <bean name="technosoft" class="spr.beans.Sports">
+        <property name="sportName" value="Hockey"/>
+        <property name="about" value="National Sport"/>
+    </bean>-->
+    
+    <!--Setting values using constructor injection-->
+<!--    <bean name="universal" class="spr.beans.Sports">
+        <constructor-arg name="sportName" value="Cricket"/>
+        <constructor-arg name="about" value="BatBall"/>
+    </bean>-->
+    
+    <!--Setting values using p namespace-->
+<!--    <bean name="hello" class="spr.beans.Sports" p:sportName="Basketball" p:about="Dribbling" >
+        
+    </bean>-->
+    
+    <!--Dependency injection-->
+<!--    <bean name="hobby1" class="spr.beans.Hobby">
+        <property name="totalHobbies" value="4" />
+        <property name="sport" ref="dependency1"/>
+    </bean>
+    
+    <bean name="dependency1" class="spr.beans.Sports">
+        <property name="sportName" value="Hockey"/>
+        <property name="about" value="National Sport"/>
+    </bean>-->
+    
+    <!--Autowiring ByName-->
+<!--    <bean name="hobby1" class="spr.beans.Hobby" autowire="byName">
+        <property name="totalHobbies" value="4" />
+        
+    </bean>
+    
+    <bean name="sport" class="spr.beans.Sports">
+        <property name="sportName" value="Hockey"/>
+        <property name="about" value="National Sport"/>
+    </bean>   -->
+
+     <!--Autowiring ByType-->
+    <bean name="hobby1" class="spr.beans.Hobby" autowire="byType">
+        <property name="totalHobbies" value="4" />
+        
+    </bean>
+    
+    <bean name="sport" class="spr.beans.Sports">
+        <property name="sportName" value="Hockey"/>
+        <property name="about" value="National Sport"/>
+    </bean>   
+
+</beans>
