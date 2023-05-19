@@ -56,7 +56,7 @@
     </bean>
     
     <bean name="sport" class="spr.beans.Sports">
-        <property name="sportName" value="Hockey"/>
+        <property name="sportName" value="Cricket"/>
         <property name="about" value="National Sport"/>
     </bean>   
 
